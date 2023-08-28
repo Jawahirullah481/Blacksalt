@@ -10,7 +10,6 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
 
     <div id="top" class="top-menu">
@@ -98,21 +97,37 @@
 
     </div>
 
-    <!-- <div id="client" class="section">
-            <p>discover our cases <span>our clients.</span></p>
-        <div id="image">
-            <img src="images/Layer 5.png" alt="" height="150px">
-            <img src="images/Layer 6.png" alt="" height="150px">
-            <img src="images/Layer 7.png" alt="" height="50px">
-            <img src="images/Layer 8.png" alt="" height="50px">
-            <img src="images/Layer 9.png" alt="" height="120px">
-            <img src="images/Layer 10.png" alt="" height="120px">
+    <div id="client" class="section">
+        <h1 class="header-1">Discover our cases</h1>
+        <h2 class="header-2">Our Clients.</h2>
+
+        <div id="slider-wrapper">
+            <div id="slider">
+                <div class="slider-item"><img src="images/Layer 5.png" alt=""></div>
+                <div class="slider-item"><img src="images/Layer 6.png" alt=""></div>
+                <div class="slider-item"><img src="images/Layer 7.png" alt=""></div>
+                <div class="slider-item"><img src="images/Layer 8.png" alt=""></div>
+                <div class="slider-item"><img src="images/Layer 9.png" alt=""></div>
+                <div class="slider-item"><img src="images/Layer 10.png" alt=""></div>
+            </div>
         </div>
-        <div id="input"><input type="radio"><input type="radio"></div>
-        <div id="arrow">
-            <img src="" style="display: none" alt="">
+        <div id="slider-navigator">
+                
+            <div id="dots-wrapper">
+                <button id="dot-left" class="dot active" onclick="scrollLeftSide()"></button>
+                <button id="dot-right" class="dot" onclick="scrollRightSide()"></button>
+            </div>
+
+            <div id="arrows">
+                <button id="arrow-left" onclick="scrollLeftSide()">
+                    <i class="fa-solid fa-arrow-left fa-2xl" style="color: #ffffff;"></i>
+                </button>
+                <button id="arrow-right" onclick="scrollRightSide()">
+                    <i class="fa-solid fa-arrow-right fa-2xl" style="color: #ffffff;"></i>
+                </button>
+            </div>
         </div>
-    </div> -->
+    </div>
 
     <div id="industry" class="section">
 
@@ -229,8 +244,6 @@
         <a href="#">Designed By <span>BlackSalt Solutions</span></a>
     </div>
 
-
     <script src="text.js"></script>
 </body>
-
 </html>
