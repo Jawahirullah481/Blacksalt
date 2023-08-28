@@ -14,7 +14,7 @@ html {
 
 body {
     font-family: 'Rubik', sans-serif;
-    width: 90vw;
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -111,7 +111,7 @@ body {
     background-attachment: fixed;
 }
 
-/* ----------Text------------ */
+/* ----------Style for Intro------------ */
 
 #intro{
     background-image: url("images/bg1.png");
@@ -130,21 +130,7 @@ body {
     width: 90%;
 }
 
-
-#intro h3::before{
-    content: "^";
-    height:80px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top:458px;
-    bottom: 0px;
-    color: #F36718;
-    font-size:25px;
-    display:block;
-}
-
-/* --------End of text--------- */
+/* --------End of intro--------- */
 
 /* --------Partner------------- */
 
@@ -314,7 +300,6 @@ body {
     display: flex;
     align-items: center;
     gap: 120px;
-    width: 175vw;
 }
 
 #client #slider .slider-item img{
@@ -404,6 +389,7 @@ body {
     display: flex;
     align-items: center;
     column-gap: 8px;
+    row-gap: 8px;
 }
 
 #industry #collection div img{
@@ -507,6 +493,9 @@ body {
 
 @media (max-width: 993px)
 {
+    .top-menu{
+        padding: 0 20px;
+    }
    
     #service #card-holder
     {
@@ -515,7 +504,7 @@ body {
 
     #service #card-holder .card{
         width: 100%;
-        height: 65vh;
+        height: 420px;
     }
 
     #client .header-2{
@@ -524,6 +513,11 @@ body {
 
     #industry #collection{
         grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    #industry #collection div{
+        width: 100%;
     }
 
 }
@@ -536,7 +530,7 @@ body {
 {
 
     .top-menu{
-        padding: 0 25px;
+        padding: 0 20px;
         height: 55px;
     }
 
@@ -595,16 +589,6 @@ body {
         padding: 50px 20px;
     }
 
-    #service #card-holder
-    {
-        flex-direction: column;
-    }
-
-    #service #card-holder .card{
-        width: 100%;
-        height: 420px;
-    }
-
     #client #slider-wrapper #slider{
         max-width: 100%;
         width: 100%;
@@ -630,6 +614,10 @@ body {
 
     #industry #collection{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #industry #collection div{
+        width: 70%;
     }
 
     #industry #collection div img{
@@ -663,5 +651,14 @@ body {
     #copyright a{
         font-size: .5rem;
         white-space: nowrap;
+    }
+}
+
+/* ------------Style for very small screens------- */
+
+@media (max-width: 350px)
+{
+    #industry #collection div{
+        flex-wrap: wrap;
     }
 }
