@@ -1,5 +1,5 @@
 var navbarShown = false;
-var isPageTop = true;
+var activeDot = document.querySelector("#dot-left");
 
 window.onscroll = function () { pageScrolled() };
 
@@ -13,7 +13,7 @@ function pageScrolled() {
     document.getElementById("active-page").childNodes[0].style.display = "none";
 
   }
-  else if(isPageTop){
+  else{
     document.getElementById("top").style.backgroundColor = "transparent";
     document.getElementById("top").style.height = "115px";
     document.getElementById("active-page").childNodes[0].style.display = "block";
@@ -22,6 +22,7 @@ function pageScrolled() {
   }
 
 }
+
 
 function toggleNavbar() {
 
@@ -38,3 +39,20 @@ function toggleNavbar() {
 
 
 
+function scrollLeftSide()
+{ 
+  activeDot.classList.remove("active");
+  document.getElementById("slider-wrapper").scrollLeft = 0;
+  activeDot = document.getElementById("dot-left");
+
+  activeDot.classList.add("active");
+}
+
+function scrollRightSide()
+{
+  activeDot.classList.remove("active");
+  document.getElementById("slider-wrapper").scrollLeft = 1100;
+  activeDot = document.getElementById("dot-right");
+
+  activeDot.classList.add("active");
+}
