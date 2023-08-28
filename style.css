@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,600;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    width: 90vw;
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: black;
+}
+
+
+/* ------------top menu ----------- */
+
+.top-menu{
+    background-color: transparent;
+    width: 100vw;
+    height: 115px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 70px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    transition-property: background-color, height;
+    transition-duration: .1s;
+    transition-timing-function: linear;
+}
+
+.top-menu .logo-img{
+    height: 50%;
+}
+
+.top-menu .logo-img img{
+    height: 100%;
+}
+
+.top-menu .fa-solid{
+    display: none;
+}
+
+.top-menu nav{
+    margin-right: 35px;
+}
+
+.top-menu nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 35px;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+.top-menu nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: .8rem;
+    letter-spacing: .150rem;
+    padding: 0;
+}
+
+.top-menu nav ul #active-page {
+    position: relative;
+}
+
+.top-menu nav ul #active-page .vert-line{
+    display: block;
+    width: 1px;
+    height: 50px;
+    background-color: rgb(255, 94, 36);
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    transition: display .1s ease-out;
+}
+
+.top-menu nav ul #active-page a, .top-menu nav ul li a:hover{
+    color: rgb(255, 94, 36);
+}
+
+
+/* ----------end of top menu---------------- */
+
+.section{
+    padding: 70px 60px;
+}
+
+#intro, #service, #client, #industry{
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ----------Text------------ */
+
+#intro{
+    background-image: url("images/bg1.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro h3 {
+    font-size: 4.5rem;
+    text-align: center;
+    font-weight:900;
+    color: white;
+    font-family:'Osward',sans-serif;
+    width: 90%;
+}
+
+
+#intro h3::before{
+    content: "^";
+    height:80px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:458px;
+    bottom: 0px;
+    color: #F36718;
+    font-size:25px;
+    display:block;
+}
+
+/* --------End of text--------- */
+
+/* --------Partner------------- */
+
+#partner{
+    width: 100vw;
+}
+
+#partner img{
+    width: 100%;
+}
+
+/* -----------End of partner */
+
+
+/* -------------service--------------- */
+
+#service{
+    background-image: url("images/service-bg.png");
+}
+
+#service .header-1, #industry .header-1, #client .header-1{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'Oswald', sans-serif;
+    color: #989696;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+#service .header-2, #industry .header-2, #client .header-2{
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+    margin-bottom: 15px;
+}
+
+#service .description{
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    line-height: 175%;
+    color: white;
+    margin-bottom: 30px;
+}
+
+#service #card-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 20px;
+    row-gap: 25px;
+    margin-bottom: 80px;
+}
+
+#service #card-holder .card{
+    padding: 25px;
+    width: 22.5%;
+    min-width: 22.5%;
+    height: 90vh;
+    position: relative;
+    border-radius: 5px;
+}
+
+#service #card-holder .card:nth-child(2n+1)
+{
+    background-color: #F36718;
+}
+
+#service #card-holder .card:nth-child(2n)
+{
+    background-color: #272727;
+}
+
+#service #card-holder .card:nth-child(2n):hover{
+    background-color: rgba(39, 39, 39, 0.75);
+}
+
+#service #card-holder .card .card-icon{
+    display: block;
+    width: 25px;
+    margin-bottom: 10px;
+}
+
+#service #card-holder .card h2{
+    color: white;
+    font-size: 1.85rem;
+    height: 4.5rem;
+    margin-bottom: 7px;
+
+}
+
+#service .card dl, #service .card dt, #service .card dd, #service .card p{
+    color: white;
+}
+
+#service .card dt{
+    font-size: .85rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+#service .card dd, #service .card p{
+    font-size: .7rem;
+    line-height: 150%;
+    margin-bottom: 25px;
+    overflow: ellipsis;
+}
+
+#service #card-holder .card button{
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: .75rem;
+    padding: 7px 11px;
+
+}
+
+#service #btn-exlpore-service{
+    background-color: #F36718;
+    color: white;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    width: max-content;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+}
+
+#service #btn-exlpore-service a{
+    text-decoration: none;
+    color: white;
+    font-size: .85rem;
+    letter-spacing: .175rem;
+}
+
+/* ---------End of service---------- */
+
+/* ----------client------------------ */
+
+#client {
+    height: 85%;
+    width: 100%;
+    position: relative;
+    top: 95%;
+    background-image: url("images/bg3.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Osward', sans-serif;
+}
+
+#client p {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    color: #989696;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 100;
+}
+
+#client p span {
+    display: block;
+    text-transform: capitalize;
+    position: absolute;
+    top: 30px;
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+
+#client #image {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 40%;
+}
+
+#input {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+}
+
+#arrow {
+    position: absolute;
+    bottom: 10%;
+    left: 80%;
+    display: flex;
+    transition: transform;
+}
+
+
+/* ------------End of client----------------- */
+
+
+/* ---------------industry------------------- */
+
+#industry{
+    max-width: 100vw;
+    background-image: url("images/industry-bg.png");
+}
+
+#industry #collection{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px 20px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+#industry #collection div{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+#industry #collection div img{
+    width: 60px;
+}
+
+#industry #collection div span{
+    font-size: .8rem;
+    color: white;
+}
+
+/* --------------End of industry------------ */
+
+/* ----------Footer -------------- */
+
+#footer{
+    width: 100vw;
+    display: grid;    
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 15px;
+    padding: 40px 20px;
+}
+
+#footer .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+#footer .card h4{
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-size: .9rem;
+}
+
+#footer #contact a{
+    color: grey;
+    font-size: .8rem;
+    margin-bottom: 7.5px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#footer #social{
+    border-left: 1px solid rgb(215, 215, 215);
+    border-right: 1px solid rgb(215, 215, 215);
+}
+
+#footer #social #logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+}
+
+#footer #social #logo a{
+    text-decoration: none;
+}
+
+#footer #social #logo a i{
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+#footer #map iframe{
+    width: 90%;
+}
+
+
+/* ----------End of footer code--------------- */
+
+/* ---------------Copyright-------------------- */
+
+#copyright{
+    width: 100vw;
+    height: 60px;
+    background-color: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+#copyright a{
+    font-size: .75rem;
+    color: grey;
+    text-decoration: none;
+}
+
+/* ---------------End of copyright-------------- */
+
+
+/* --------------Style for smaller screens----------------- */
+
+
+@media (max-width: 776px)
+{
+
+    .top-menu{
+        padding: 0 25px;
+        height: 55px;
+    }
+
+    .top-menu .logo-img{
+        height: 55%;
+    }
+
+    .top-menu .fa-solid{
+        display: block;
+    }
+
+    .top-menu nav{
+        position: absolute;
+        max-height: 0;
+        top: 105%;
+        left: 25px;
+        width: calc(100vw - 50px);
+        overflow: hidden;
+        transition: max-height .3s ease-out;
+        margin-right: 0;
+    }
+
+    .top-menu nav ul{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .top-menu nav ul li{
+        width: 100%;
+    }
+
+    .top-menu nav ul li a{
+        display: block;
+        width: 100%;
+        font-size: .8rem;
+        background-color: rgba(0, 0, 0, 0.95);
+        letter-spacing: normal;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, .065);
+    }
+
+    .top-menu nav ul #active-page a{
+        background-color: #101010f2;
+    }
+
+    .top-menu nav ul li a:hover{
+        background-color: #101010f2;
+    }
+
+    #text h3{
+        font-size: 2.5rem;
+    }
+
+    #service{
+        padding: 50px 20px;
+    }
+
+    #service #card-holder
+    {
+        flex-direction: column;
+    }
+
+    #service #card-holder .card{
+        width: 100%;
+        height: 75vh;
+    }
+
+    #industry{
+        padding: 50px 20px;
+    }
+
+    #industry #collection{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #industry #collection div img{
+        width: 35px;
+    }
+
+    #footer
+    {
+        grid-template-columns: 2fr 3fr;
+        column-gap: 10px;
+    }
+
+    #footer .card:not(#map){
+        align-items: flex-start;
+    }
+
+    #footer #map{
+        order: 2;
+        grid-row: span 2;
+    }
+
+    #footer #social{
+        order: 3;
+        border: none;
+    }
+
+    #copyright{
+        padding: 0 25px;
+    }
+
+    #copyright a{
+        font-size: .5rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 976px)
+{
+
+    #service #card-holder
+    {
+        flex-direction: column;
+    }
+
+    #service #card-holder .card{
+        width: 100%;
+        height: 65vh;
+    }
+
+}
