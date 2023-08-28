@@ -1,6 +1,11 @@
 var navbarShown = false;
 var activeDot = document.querySelector("#dot-left");
 
+window.onresize = function()
+{
+  console.log(window.innerWidth)
+}
+
 window.onscroll = function () { pageScrolled() };
 
 function pageScrolled() {
@@ -8,17 +13,26 @@ function pageScrolled() {
   if(document.documentElement.scrollTop > 0)
   {
     document.getElementById("top").style.backgroundColor = "rgba(0, 0, 0, .95)";
+    document.getElementById("active-page").childNodes[0].style.display = "none";
+
+    // If it is medium or larger screen, then only you increase the topmenu height.
+    if(window.innerWidth > 769)
+    {
     document.getElementById("top").style.height = "55px";
     document.getElementById("top").style.paddingTop = "0px";
-    document.getElementById("active-page").childNodes[0].style.display = "none";
+    }
 
   }
   else{
     document.getElementById("top").style.backgroundColor = "transparent";
-    document.getElementById("top").style.height = "115px";
     document.getElementById("active-page").childNodes[0].style.display = "block";
-    document.getElementById("top").style.paddingTop = "30px";
 
+    // If it is medium or larger screen, then only you increase the topmenu height.
+    if(window.innerWidth > 769)
+    {
+    document.getElementById("top").style.height = "115px";
+    document.getElementById("top").style.paddingTop = "30px";
+    }
   }
 
 }
