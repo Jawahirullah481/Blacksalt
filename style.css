@@ -38,8 +38,8 @@ body {
     top: 0;
     z-index: 1;
     transition-property: background-color, height;
-    transition-duration: .1s;
-    transition-timing-function: linear;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
 }
 
 .top-menu .logo-img{
@@ -99,7 +99,7 @@ body {
 /* ----------end of top menu---------------- */
 
 .section{
-    padding: 70px 60px;
+    padding: 70px 50px;
 }
 
 #intro, #service, #client, #industry{
@@ -188,12 +188,12 @@ body {
 }
 
 #service #card-holder .card{
-    padding: 25px;
-    width: 22.5%;
+    padding: 15px;
+    width: 25%;
     min-width: 22.5%;
-    height: 90vh;
-    position: relative;
+    height: 465px;
     border-radius: 5px;
+    position: relative;
 }
 
 #service #card-holder .card:nth-child(2n+1)
@@ -219,27 +219,40 @@ body {
 #service #card-holder .card h2{
     color: white;
     font-size: 1.85rem;
-    height: 4.5rem;
+    height: calc(1.85rem * 2.45);
     margin-bottom: 7px;
-
 }
 
-#service .card dl, #service .card dt, #service .card dd, #service .card p{
-    color: white;
+#service #card-holder .card-body{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-#service .card dt{
+#service #card-holder .card-body div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+}
+
+#service #card-holder .card-body div h3{
     font-size: .85rem;
     font-weight: bold;
     margin-bottom: 5px;
+    color: white;
 }
 
-
-#service .card dd, #service .card p{
+#service #card-holder .card-body div p{
     font-size: .7rem;
-    line-height: 150%;
+    word-spacing: 1px;
+    line-height: 160%;
+    font-weight: 500;
+    font-family: sans-serif;
     margin-bottom: 25px;
-    overflow: ellipsis;
+    color: white;
+    padding-left: 5px;
 }
 
 #service #card-holder .card button{
@@ -290,7 +303,7 @@ body {
 
 #client #slider-wrapper{
     box-sizing: content-box;
-    margin: 50px 0;
+    margin: 100px 0;
     position: relative;
     overflow-x: hidden;
     scroll-behavior: smooth;

@@ -6,11 +6,13 @@ window.onresize = function()
   console.log(window.innerWidth)
 }
 
-window.onscroll = function () { pageScrolled() };
+window.onscroll = function () { 
+  pageScrolled()
+ };
 
 function pageScrolled() {
 
-  if(document.documentElement.scrollTop > 0)
+  if(document.documentElement.scrollTop > 10)
   {
     document.getElementById("top").style.backgroundColor = "rgba(0, 0, 0, .95)";
     document.getElementById("active-page").childNodes[0].style.display = "none";
