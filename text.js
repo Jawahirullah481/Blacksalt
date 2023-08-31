@@ -71,4 +71,5 @@ function scrollRightSide()
   activeDot = document.getElementById("dot-right");
 
   activeDot.classList.add("active");
+
 }
